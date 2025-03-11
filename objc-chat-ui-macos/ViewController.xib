@@ -59,13 +59,38 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
+                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbt-uV-uAf" userLabel="ChatScrollView">
+                    <rect key="frame" x="10" y="47" width="240" height="383"/>
+                    <clipView key="contentView" id="f9X-JO-3IK">
+                        <rect key="frame" x="1" y="1" width="238" height="381"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view id="ZYH-eJ-clg">
+                                <rect key="frame" x="0.0" y="0.0" width="223" height="366"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                        </subviews>
+                    </clipView>
+                    <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="vKm-jc-JcV">
+                        <rect key="frame" x="1" y="366" width="238" height="16"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Lqd-uF-7xl">
+                        <rect key="frame" x="223" y="1" width="16" height="381"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
             </subviews>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="0EG-LA-0Yb" secondAttribute="bottom" constant="10" id="1XD-gn-d2l"/>
+                <constraint firstAttribute="trailing" secondItem="Rbt-uV-uAf" secondAttribute="trailing" constant="10" id="3Rb-4e-yEs"/>
+                <constraint firstItem="Rbt-uV-uAf" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="WuI-qh-dKf"/>
                 <constraint firstItem="3D1-Po-0MR" firstAttribute="leading" secondItem="0EG-LA-0Yb" secondAttribute="trailing" constant="8" id="Yjb-IV-SBb"/>
+                <constraint firstItem="Rbt-uV-uAf" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="c8h-vM-RX4"/>
                 <constraint firstAttribute="trailing" secondItem="3D1-Po-0MR" secondAttribute="trailing" constant="10" id="iBz-b9-aiP"/>
                 <constraint firstItem="0EG-LA-0Yb" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="lfR-lz-cSC"/>
                 <constraint firstAttribute="bottom" secondItem="3D1-Po-0MR" secondAttribute="bottom" constant="10" id="qKx-jB-pGf"/>
+                <constraint firstItem="0EG-LA-0Yb" firstAttribute="top" secondItem="Rbt-uV-uAf" secondAttribute="bottom" constant="5" id="vv4-1Q-1qX"/>
             </constraints>
             <point key="canvasLocation" x="83" y="-36"/>
         </customView>
