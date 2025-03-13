@@ -9,7 +9,7 @@
             <connections>
                 <outlet property="chatInputScrollView" destination="0EG-LA-0Yb" id="wVE-AM-8Tb"/>
                 <outlet property="chatInputScrollViewHeight" destination="tKH-IQ-DvI" id="rzr-eV-Vi8"/>
-                <outlet property="chatTextView" destination="piy-TT-vXy" id="kJ8-sx-9gi"/>
+                <outlet property="chatInputTextView" destination="piy-TT-vXy" id="ZT8-sF-xSf"/>
                 <outlet property="sendButton" destination="3D1-Po-0MR" id="Esa-yK-J5s"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -37,7 +37,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="200" height="32"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView wantsLayer="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="piy-TT-vXy" userLabel="ChatTextView">
+                            <textView wantsLayer="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="piy-TT-vXy" userLabel="ChatInputTextView" customClass="ChatInputTextView">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="32"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
