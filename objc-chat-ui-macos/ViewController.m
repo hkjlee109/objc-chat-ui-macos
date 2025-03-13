@@ -3,7 +3,7 @@
 @interface ViewController () <NSTextViewDelegate>
 
 @property (weak) IBOutlet NSScrollView *chatInputScrollView;
-@property (unsafe_unretained) IBOutlet NSTextView *chatTextView;
+@property (weak) IBOutlet NSTextView *chatTextView;
 @property (weak) IBOutlet NSButton *sendButton;
 
 @property (weak) IBOutlet NSLayoutConstraint *chatInputScrollViewHeight;
