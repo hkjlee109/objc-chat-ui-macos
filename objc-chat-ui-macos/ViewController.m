@@ -2,7 +2,7 @@
 #import "ChatInputTextView.h"
 #import "ChatInputTextField.h"
 
-@interface ViewController ()
+@interface ViewController () <NSTextFieldDelegate>
 
 @property (weak) IBOutlet NSScrollView *chatInputScrollView;
 @property (weak) IBOutlet ChatInputTextField *chatInputTextField;
@@ -29,6 +29,7 @@
     self.chatInputContainerView.layer.masksToBounds = YES;
     self.chatInputContainerView.layer.backgroundColor = [[NSColor controlBackgroundColor] CGColor];
     
+    self.chatInputTextField.delegate = self;
     self.chatInputTextField.bezeled = NO;
     self.chatInputTextField.drawsBackground = NO;
     self.chatInputTextField.focusRingType = NSFocusRingTypeNone;
@@ -40,6 +41,18 @@
 - (IBAction)onEnterKeyPress:(id)sender {
     self.chatInputTextField.stringValue = @"";
     [self.chatInputTextField invalidateIntrinsicContentSize];
+}
+
+- (BOOL)control:(NSControl *)control textView:(NSTextView *)textView doCommandBySelector:(SEL)commandSelector {
+    if (commandSelector == @selector(insertNewline:) &&
+        [[[NSApplication sharedApplication] currentEvent] modifierFlags]
+        & NSEventModifierFlagShift) {
+
+        [textView insertNewlineIgnoringFieldEditor:self];
+        return YES;
+    }
+
+    return NO;
 }
 
 @end
